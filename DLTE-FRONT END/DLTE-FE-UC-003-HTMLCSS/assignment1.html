@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transaction details</title>
+</head>
+<body>
+    <script>
+        let transactionId, transactionmode, transactiontype, transactiondate, transactionamount;
+        window.onload=function() {
+            transactionId=prompt("Let us know your Id","")
+            transactionmode=prompt("Let us know your mode","")
+            transactiontype=prompt("Let us know your type","")
+            transactiondate=prompt("Let us know your date","")
+            transactionamount=prompt("Let us know your amount","")
+            var view = document.getElementById("show")
+            view.innerHTML="Logged transaction details are Id"+transactionId+" mode "+transactionmode+" type"+transactiontype+" Date "+transactiondate+" amount of "+transactionamount 
+        }
+ </script>
+ <p id="show">Result Will be shown here!!!</p>
+
+</body>
+</html>                                     

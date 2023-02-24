@@ -1,0 +1,12 @@
+.container{
+    background-color:antiquewhite;
+    align-items: space-around;
+    color:beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    .child{
+        border: radius 20px; 
+        padding: 8px;
+        box-shadow: 1px 1px 40px black;
+        .title{
+            text-align: center;
+            color:purple ;

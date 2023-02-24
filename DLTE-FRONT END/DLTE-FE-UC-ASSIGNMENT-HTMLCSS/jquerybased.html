@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>JQuerybasedEvent</title>
+    
+    
+    <script>
+     $(document).ready(()=>{
+        $("body").css("background-color","blue")              //setting background color of the page using jQuery
+        $("#calculate").click(()=>{
+            const fname=$("#fullname").val()                    //fetching and storing name of user
+            const fprof=$("input[name=profession]").val()       //fetching and storing profession of user
+            const fsal=$(".salary").val()                       //fetching and storing salary of user
+
+            var tax=0;                                          //declaration and initialization of tax variable
+            
+            if(fprof=="employee"){    //if the user is an employee
+                
+            if(fsal<=30000){
+                tax=0;
+            }
+            if(fsal>30000 && fsal<=40000) {
+                tax=(fsal-25000)*10/100;
+            }
+            if(fsal>40000 && fsal<=70000) {
+                tax=(fsal-40000)*20/100;
+            }
+            if(fsal>70000){
+                tax=((fsal-70000)*30/100);
+            }
+            }
+            if(fprof=="business"){                  //if the user is a businessman
+                
+                if(fsal<=30000){
+                    tax=0;
+                }
+                if(fsal>30000 && fsal<=40000) {
+                    tax=(fsal-30000)*20/100;
+                }
+                if(fsal>40000 && fsal<=70000) {
+                    tax=(fsal-40000)*30/100;
+                }
+                if(fsal>70000){
+                    tax=((fsal-70000)*40/100);
+                }
+            }
+            if(fprof=="self-employee"){                 //if the user is a self-employee
+                
+                if(fsal<=30000){
+                    tax=0;
+                }
+                if(fsal>30000 && fsal<=40000) {
+                    tax=(fsal-30000)*30/100;
+                }
+                if(fsal>40000 && fsal<=70000) {
+                    tax=(fsal-40000)*40/100;
+                }
+                if(fsal>70000){
+                    tax=((fsal-70000)*50/100);
+                }
+            }
+            $("output").css("background-color","purple")      //css for changing the background color of output
+            $("output").val(fname+", "+fprof+" with salary "+fsal+" has to pay tax of "+tax) //output statement
+      });
+
+     });
+
+    
+    </script>
+</head>
+<body>
+    <!-- Heading of the page -->
+    <div class="container-fluid bg-success">
+        <div class="row">
+            <h4 class="text-light text-center">Income Tax Calculator</h4>
+        </div>
+    </div>
+    <!-- Main content consisting of input fields -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <form class="col-lg-6 col-md-8 col-sm-12">
+                <div class="form-group mt-5">
+                    <label class="text-bg-danger rounded-5 w-25 text-center">Enter full Name:</label>
+                    <input type="text" id="fullname" placeholder="Enter your fullname" class="w-100 mt-2"/>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="text-bg-danger rounded-5 w-25 text-center">Enter Profession:</label>
+                    <input type="text" name="profession" placeholder="Enter profession" class="w-100 mt-2"/>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="text-bg-danger rounded-5 w-25 text-center">Enter Salary:</label>
+                    <input type="number" class="salary w-100 mt-2" placeholder="Enter salary"/>
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <input type="button" id="calculate" value="calculate"/>
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <output></output>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

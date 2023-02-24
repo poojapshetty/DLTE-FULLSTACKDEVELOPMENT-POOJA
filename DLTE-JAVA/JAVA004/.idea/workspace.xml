@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75b0d8d8-cf0d-4e14-a099-c6193f0e7b6b" name="Default Changelist" comment="Assignment 4">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JAVA005/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA005/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA005/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2M9hxJlqWLXbg5MGxj8cayZ9Sxy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="java004.example.Application" />
+      <module name="JAVA004" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="java004.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75b0d8d8-cf0d-4e14-a099-c6193f0e7b6b" name="Default Changelist" comment="" />
+      <created>1677185950909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677185950909</updated>
+      <workItem from="1677185954550" duration="761000" />
+      <workItem from="1677198402345" duration="1544000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Assignment 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assignment 4" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="249" y="0" key="CommitChangelistDialog2" timestamp="1677259429348">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="249" y="0" key="CommitChangelistDialog2/0.0.1280.672@0.0.1280.672" timestamp="1677259429348" />
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1677198453989">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.672@0.0.1280.672" timestamp="1677198453989" />
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom" timestamp="1677198343428">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.bottom/0.0.1280.672@0.0.1280.672" timestamp="1677198343428" />
+    <state width="1237" height="161" key="GridCell.Tab.0.center" timestamp="1677198343428">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.center/0.0.1280.672@0.0.1280.672" timestamp="1677198343428" />
+    <state width="1237" height="161" key="GridCell.Tab.0.left" timestamp="1677198343425">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.left/0.0.1280.672@0.0.1280.672" timestamp="1677198343425" />
+    <state width="1237" height="161" key="GridCell.Tab.0.right" timestamp="1677198343428">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1677198343428" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1677259150970">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1677259150970" />
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1677198402366">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="349" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.672@0.0.1280.672" timestamp="1677198402366" />
+    <state x="91" y="42" key="new project wizard" timestamp="1677198463937">
+      <screen x="0" y="0" width="1280" height="672" />
+    </state>
+    <state x="91" y="42" key="new project wizard/0.0.1280.672@0.0.1280.672" timestamp="1677198463937" />
+  </component>
+</project>

@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color:violet;
+    justify-content:center;
+    display: flex;
+    align-items:center;
+    color:beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.title{
+    text-align: center;
+    color:blue;
+}
+.child{
+    height: 60%;
+    width: 40%;
+    border: radius 20px; 
+    padding: 6px;
+    box-shadow: 1px 1px 40px black;
+    background-color:blue;
+}
+.grp{
+    display: flex;
+    justify-content:space-between;
+    padding: 4px;
+}
+input{
+    padding: 10px;
+    border:navajowhite;
+    outline:invert;
+    border-radius: 10px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.img{
+    width: 100px;
+    height: 40px;
+}

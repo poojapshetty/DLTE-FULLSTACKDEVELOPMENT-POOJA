@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <script src="script.js"></script>
+    <style>
+      li{
+        margin-bottom: 15px;
+      }
+    </style>
+</head>
+<body>
+    <!-- The bank logo -->
+    <div class="d-flex justify-content-center mt-3">
+        <img src="files4/img1.png" width="400px" alt="Logo">
+    </div>
+    <!-- A marquee displaying some guidline -->
+    <div class="justify-content-center d-flex">
+        <marquee class="bg-light w-75 m-3" direction="left">Never share your account details such as account number, login ID, password,
+            PIN, UPI-PIN, OTP, ATM / Debit card / credit card details with anyone, not even
+            with bank officials, however genuine they might sound.</marquee>
+    </div>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-lg-6 mt-3 col-sm-12">
+                <!-- A carousel with multiple images -->
+                <div class=" d-flex align-items-center">
+                    <div id="slide" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="files4/download.jpg" class="d-block w-100" alt="Slide 1">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="files4/download2.jpg" class="d-block w-100" alt="Slide 2">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="files4/download2.jpg" class="d-block w-100" alt="Slide 3">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <!-- The login form -->
+                <div class="card p-2 mt-2 bg-light">
+                  <form name="login">
+                    <div class="mt-3 mb-3">
+                      <label class="form-label">full name</label>
+                      <input type="text" class="form-control" name="id">
+                    </div>
+                    <div class="mb-3">
+                      <label  class="form-label">Password</label>
+                      <input type="password" class="form-control" name="pass" >
+                    </div>
+                    <div class="mb-3">
+                      <a href="#" class="text-decoration-none">Forgot Password?</a>
+                    </div>
+                    <a  class="btn btn-primary" onclick="authen()">Login</a>
+                  </form>
+                </div>
+                
+            </div>      
+        </div>
+        <!-- A marquee displaying the various safety measures  -->
+        <div class="card bg-light mt-3 d-flex">
+            <p class="d-flex fs-5 bg-info justify-content-center">SAFE DIGITAL BANKING PRACTICES</p>
+            <marquee width="100%" direction="up" height="40%">
+                <ul>
+                    <li>Do not download any unknown app on your phone / device. The app may
+                        access your confidential data secretly.</li>
+                    <li>Transactions involving receipt of money do not require scanning barcodes / QR
+                        codes or entering MPIN. Thus, exercise caution if asked to do so.</li>
+                    <li>Check URLs and domain names received in emails / SMSs for spelling errors.
+                        Use only verified, secured, and trusted websites / apps for online banking, that
+                        is, websites starting with ‘’https’’. In case of suspicion, notify local police /
+                        cybercrime branch immediately.
+                        </li>
+                    <li>• Secure your cards and set daily limit for transactions. You may also set limits
+                        and activate / deactivate for domestic / international use. This can limit loss due
+                        to fraud</li>
+                    <li>Regularly check your email and phone messages for alerts from your financial
+                        service provider. Report any un-authorized transaction observed to your bank /
+                        NBFC / Service provider immediately for blocking the card / account / wallet, so
+                        as to prevent any further losses. 
+                        </li>
+                    <li>Do not be misled by advices intimating deposit of money on your behalf with
+                        RBI for foreign remittances, receipt of commission, or wins of lottery.</li>
+                    <li>Do not share the password of your email linked to your bank / e-wallet account.
+                        Do not have common passwords for e-commerce / social media sites and your
+                        bank account / email linked to your bank account. Avoid banking through public,
+                        open or free networks. </li>
+                    
+                </ul>    
+            </marquee>
+        </div>  
+    </div>   
+</body>
+</html>
