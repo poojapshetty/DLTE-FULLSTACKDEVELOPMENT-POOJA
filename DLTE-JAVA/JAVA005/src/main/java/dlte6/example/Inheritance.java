@@ -1,67 +1,69 @@
+package dlte6.example;
+import java.util.*;
+public class Inheritance {
+    public static void main(String[] args) {
+        SMS sms = new SMS("SURYA BOSS", 12356, 100.0);
 
-    import java.util.Scanner;
-class BankDetails {
-    private String accno;
-    private String name;
-    private long balance;
-    Scanner sc = new Scanner(System.in);
-    //method to open new account
-    public void openAccount() {
-        System.out.print("Enter Account No: ");
-        accno = sc.next();
-        System.out.print("Enter Name: ");
-        name = sc.next();
-        System.out.print("Enter Balance: ");
-        balance = sc.nextLong();
-    }
-    //method to display account details
-    public void showAccount() {
-        System.out.println("Name of account holder: " + name);
-        System.out.println("Account no.: " + accno);
-        System.out.println("Balance: " + balance);
-    }
-    //method to deposit money
-    public void deposit() {
-        long amt;
-        System.out.println("Enter the amount you want to deposit: ");
-        amt = sc.nextLong();
-        balance = balance + amt;
-    }
-    //method to withdraw money
-    public void withdrawal() {
-        long amt;
-        System.out.println("Enter the amount you want to withdraw: ");
-        amt = sc.nextLong();
-        if (balance >= amt) {
-            balance = balance - amt;
-            System.out.println("Balance after withdrawal: " + balance);
-        } else {
-            System.out.println("Your balance is less than " + amt + "\tTransaction failed...!!" );
-        }
-    }
-    //method to search an account number
-    public boolean search(String ac_no) {
-        if (accno.equals(ac_no)) {
-            showAccount();
-            return (true);
-        }
-        return (false);
+        // Performing  a balance enquiry
+        sms.UserInteraction(1901);
+
+        // Recharging the account
+        sms.UserInteraction(2245);
+
+        // Booking a ticket
+        sms.book_ticket();
     }
 }
-public class BankingApp {
-    public static void main(String arg[]) {
-        Scanner sc = new Scanner(System.in);
-        //create initial accounts
-        System.out.print("How many number of customers do you want to input? ");
-        int n = sc.nextInt();
-        BankDetails C[] = new BankDetails[n];
-        for (int i = 0; i < C.length; i++) {
-            C[i] = new BankDetails();
-            C[i].openAccount();
+
+
+class KYC {
+    String name;
+    int accnum;
+    double balance;
+
+    KYC(String name, int accnum, double balance) {
+        this.name = name;
+        this.accnum = accnum;
+        this.balance = balance;
+    }
+}
+
+class Transaction extends KYC {
+    Transaction(String name, int accnum, double balance) {
+        super(name, accnum, balance);
+    }
+
+    void balance_enq() {
+        System.out.println("CURRENT BALANCE-> " + balance);
+    }
+
+    void recharge(double amount) {
+        balance += amount;
+        System.out.println("RECHARGE DONE!! NEW BALANCE IS-> " + balance);
+    }
+
+    void book_ticket() {
+        System.out.println("BOOKING TICKET...");
+        // code for booking ticket......
+    }
+}
+
+class SMS extends Transaction {
+    SMS(String name, int accnum, double balance) {
+        super(name, accnum, balance);
+    }
+
+    void UserInteraction(int num) {
+        switch (num) {
+            case 1901:
+                balance_enq();
+                break;
+            case 2245:
+                recharge(50.0); // recharge with 50 units
+                break;
+            default:
+                System.out.println("INVALID");
         }
-        // loop runs until number 5 is not pressed to exit
-        int ch;
-        do {
-            System.out.println("\n ***Banking System Application***");
-            System.out.println("1. Display all account details \n 2. Search by Account number\n 3. Deposit the amount \n 4. Withdraw the amount \n 5.Exit ");
-            System.out.println("Enter your choice: ");
+    }
+}
+

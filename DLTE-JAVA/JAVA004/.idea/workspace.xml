@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75b0d8d8-cf0d-4e14-a099-c6193f0e7b6b" name="Default Changelist" comment="Assignment 4">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JAVA005/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JAVA005/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JAVA005/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA005/src/main/java/dlte6/example/Inheritance.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1677185950909</updated>
       <workItem from="1677185954550" duration="761000" />
-      <workItem from="1677198402345" duration="1544000" />
+      <workItem from="1677198402345" duration="3638000" />
     </task>
     <servers />
   </component>
@@ -120,10 +119,10 @@
       <screen x="0" y="0" width="1280" height="672" />
     </state>
     <state width="1237" height="161" key="GridCell.Tab.0.right/0.0.1280.672@0.0.1280.672" timestamp="1677198343428" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1677259150970">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1677262481978">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1677259150970" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.672@0.0.1280.672" timestamp="1677262481978" />
     <state x="349" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1677198402366">
       <screen x="0" y="0" width="1280" height="672" />
     </state>
