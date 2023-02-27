@@ -5,7 +5,7 @@ public class inheritance {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Sms obj = new Sms("Gourav","123456789",6000);
+        Sms obj = new Sms("pooja","987654321",5000);
         System.out.println("Enter the code:");
         Integer num = sc.nextInt();
         obj.message(num);
