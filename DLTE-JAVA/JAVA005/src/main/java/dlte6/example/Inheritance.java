@@ -2,7 +2,7 @@ package dlte6.example;
 import java.util.*;
 public class Inheritance {
     public static void main(String[] args) {
-        SMS sms = new SMS("SURYA BOSS", 12356, 100.0);
+        SMS sms = new SMS("POOJA", 12356, 100.0);
 
         // Performing  a balance enquiry
         sms.UserInteraction(1901);
