@@ -1,0 +1,17 @@
+create table STUDENTDETAILS2(reg_num int not null, name varchar(20) not null, age int not null, email varchar(20) not null,address varchar(20) not null);
+
+alter table STUDENTDETAILS2 add primary key(reg_num);
+
+create sequence info_seq start with 100 increment by 1;
+
+create table Address(address_id int not null, locality varchar(255) not null, area varchar(255) not null, city varchar(255) not null, code int not null);
+
+insert into Address values(info_seq.NEXTVAL,'1267/E','bajagoli','Karkala',654334);
+
+insert into Address values(info_seq.NEXTVAL,'1245/4','Mala','Mangalore',574156);
+
+insert into Address values(info_seq.NEXTVAL,'1265/F','Hiriyangadi','Udupi',574122);
+
+insert into STUDENTDETAILS2 values(546780,'pooja',22,'pooja@gmail.com',info_seq.NEXTVAL);
+
+insert into STUDENTDETAILS2 values(544780,'Amrutha',20,'amrutha@gmail.com',info_seq.NEXTVAL);
