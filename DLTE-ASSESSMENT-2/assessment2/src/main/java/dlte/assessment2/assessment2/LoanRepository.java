@@ -17,4 +17,7 @@ public interface LoanRepository  extends JpaRepository<Loan,Long> {
     @Transactional
     @Query("update Loan set statusOfApproval='Approved' where cibilcredit>700 and profession in ('salaried','self-employed') and incomePerAnnum >= requestedAmount*3")
     void updateStatus();
+    
+    @Query("select loanRequestNumber,requestedAmount,cibilcredit,aadharNumber,panNumber,profession,incomePerAnnum,statusOfApproval,dateOfTheRequest from Loan where statusOfApproval='Rejected'")
+    List<Object[]> fetchByStatus();
 }
