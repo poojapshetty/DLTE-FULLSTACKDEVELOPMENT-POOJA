@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <!--styling of the dashboard-->
+    <style>
+        html,
+        body {
+            height: 50%;
+        }
+
+        body {
+            margin: 100px;;
+            background: linear-gradient(45deg, #d5e6ea, #93afc3);
+            font-family: sans-serif;
+            font-weight: 100;
+            padding-top: 0%;
+            margin-top: 0%;
+            margin-right: 0%;
+        }
+        .container {
+            position:absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /*table styling */
+        table {
+            width: 800px;
+            border-collapse: collapse;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(234, 2, 2, 0.1);
+            background-color: beige;
+        }
+        td, th {
+            border: 1px solid #5871f0;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #7aeee8;
+        }
+        th {
+            text-align: left;
+        }
+        thead th {
+            background-color: #0be047;
+        }
+        tbody tr:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+    </style>
+
+    <!--Ajax part for the listing the payee-->
+    <script>
+        function showPayee(user){
+
+            //var user = sessionStorage.getItem("logged");
+            var soapRequest = "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:soap=\"http://soap.bank.project\">\n" +
+                "<soapenv:Header/>\n" +
+                "<soapenv:Body>\n" +
+                "<soap:listPayeeRequest>\n" +
+                "<soap:username>" + user + "</soap:username>\n" +
+                "</soap:listPayeeRequest>\n" +
+                "</soapenv:Body>\n" +
+                "</soapenv:Envelope>"
+                $.ajax({
+                    url: "http://localhost:8085/listpayee",
+                    type: "POST",
+                    dataType: "xml",
+//processData: false,
+                    contentType: "text/xml;charset=\"UTF-8\"",
+                    data: soapRequest,
+                    success: (data) => {
+                        $(data).find('ns2\\:payee').each(function () {
+                            var payeeId = $(this).find('ns2\\:payeeId').text();
+                            var payeeName = $(this).find('ns2\\:payeeName').text();
+                            //  var payeeAccNum = $(this).find('ns2\\:payeeAccNum').text();
+                            //var customerId = $(this).find('ns2\\:customerId').text();
+// var customerId = $(this).find('ns2\\:customerId').text();
+                            $("tbody").append("<tr><td>" + payeeId + "</td><td>" + payeeName + "</td></tr>");
+                        });
+
+                    },
+                    error: () => {
+                        alert("error")
+                    }
+                });
+        }
+
+        $(document).ready(()=>{
+            $.ajax({
+                url: "http://localhost:8085/payee/username",
+                type: "GET",
+                success:(data) =>{
+                    //alert(data)
+
+                    showPayee(data)}
+                })
+            $("#transfer").click(()=>{
+                // alert("event working")
+                window.location.href="http://localhost:8085/web/transaction";
+            })
+
+            $("#addPayeeBtn").click(()=>{
+                // alert("event working")
+                window.location.href="http://localhost:8085/web/addpayee";
+            })
+         // getUserDetails(data)
+            })
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#updatePayeeBtn").click(()=>{
+                 //alert("event working")
+                window.location.href="http://localhost:8085/web/update/";
+            })
+
+        })
+    </script>
+</head>
+<body>
+<p align="right" >
+<a th:href="@{/logout}" class="btn text-dark "><i class="fa fa-close"></i> Logout</a>
+</p>
+            <!--adding the image-->
+<div class="d-flex justify-content-left mt-4">
+    <img  src="/images/logo2.png" width="100px" height="100px">
+</div>
+
+<div class=" d-flex justify-content-end mt-1 m-4">
+    <button type="button"  id="updatePayeeBtn" class="btn  btn-success">UPDATE</button><!--update payee button-->
+    <button type="button" id="addPayeeBtn" class=" btn col-2 btn-primary">ADD PAYEE</button> <!--add payee button-->
+    <button type="button" id="transfer" class="btn btn-primary ">PAYMENT TRANSFER</button><!--payment transfer button-->
+</div>
+<!--listing the payeeId and payeeName-->
+<div class="row">
+    <div class="table-responsive col-lg-8 justify-content-left">
+        <h2 class="text-dark">LIST OF PAYEES</h2>
+        <table style="width: 90%; height: auto;">
+            <tr>
+                <th>PAYEE ID</th>
+                <th>PAYEE NAME</th>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-4 mt-2">
+        <div class="search-container">
+            <form action="">
+                <!--search payee button-->
+                <input type="text" placeholder="Search payee" name="search">
+                <!--submit button-->
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

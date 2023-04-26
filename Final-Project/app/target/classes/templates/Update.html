@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payeee Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>UPDATE PAYEE</title>
+    <style>
+        img{
+
+            width: 400px;
+            height:200px;
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            background: linear-gradient(45deg,rgb(211, 211, 211),rgb(135, 250, 231));
+            justify-content:center;
+            display:flex;
+            align-items:center;
+            color:black;
+        }
+
+        .title{
+            text-align:center;
+            color:black;
+            background-color: beige;
+        }
+
+        .child{
+            /*border:5px solid black;*/
+            border-radius:20px;
+            padding:8px;
+            box-shadow:5px 5px 5px black;
+            background-color: rgb(240, 249, 255);
+        }
+        .grp{
+            display:flex;
+            justify-content:space-between;
+            padding:8px;
+        }
+        label{
+            flex:4;
+        }
+        input{
+            padding:8px;
+            flex:8;
+            border:none;
+            outline:none;
+            border-radius:10px;
+        }
+        .row{
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            padding:4px;
+        }
+        .col{
+            flex:6;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(() => {
+// let payeeId = $("input[name=payeeId]").val()
+// alert("hellooo")
+                let payeeId = $("input[name=PayeeId]").val()
+                let payeeName = $("input[name=PayeeName]").val()
+                let payeeAccountNumber = $("input[name=PayeeAccountNumber]").val()
+                let customerId = $("input[name=CustomerId]").val()
+// alert(payeeId+" "+payeeName+" "+payeeAccountNumber+" "+customerId)
+                $.post("http://localhost:8085/payee/update", {
+                    payeeId:payeeId,
+                    payeeName:payeeName,
+                    payeeAccountNumber:payeeAccountNumber,
+                    customerId:customerId
+                }, function (data) {
+                    alert(data)
+                })
+            })
+        })
+    </script>
+    <script>
+        $(document).ready(()=> {
+            $("#update").click(() => {
+                window.location.href="http://localhost:8085/web/update"
+            })
+        })
+    </script>
+</head>
+<body>
+<p align="right" >
+    <a th:href="@{/logout}" class="btn text-dark "><i class="fa fa-close"></i> Logout</a>
+</p>
+<h1 class="title">UPDATE PAYEE</h1>
+<div class="container">
+    <form class="child">
+        <div class="grp">
+            <labeL>PAYEE ID</labeL>
+            <input type ="text" name="PayeeId" placeholder="ID">
+        </div>
+        <div class="grp">
+            <labeL>PAYEE NAME</labeL>
+            <input type ="text" name="PayeeName" placeholder="NAME AS PER AADHAR">
+
+        </div>
+        <div class="grp">
+            <labeL>PAYEE ACCOUNT NUMBER </labeL>
+            <input type ="text" name="PayeeAccountNumber" placeholder="ACCOUNT NUMBER">
+
+        </div>
+
+        <div class="grp">
+            <labeL>CUSTOMER ID</labeL>
+            <input type ="text" name="CustomerId" placeholder="CUSTOMER ID">
+        </div>
+        <div class="d-flex mt-4 row justify-content-around">
+            <button type="button" id="btn1" class=" btn col-3 btn-success">UPDATE</button>
+            <input type="reset" id="btn" class="btn col-3 btn-primary" value="Clear">
+            <!-- <button type="reset" id="btn2" class=" btn col-3 btn-primary">DELETE</button>-->
+
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
